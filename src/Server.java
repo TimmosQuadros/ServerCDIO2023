@@ -33,7 +33,7 @@ public Server() {
 			}
 		}
 		
-		
+		serverSocket.close();
 		
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
@@ -97,6 +97,10 @@ public Server() {
 			writer.println("StopMotor");
 		}else if(e.getKeyChar()=='å') {
 			writer.println("ReverseMotor");
+		}else if(e.getKeyChar()=='u') {
+			writer.println("motorCOut");
+		}else if(e.getKeyChar()=='i') {
+			writer.println("motorCIn");
 		}
 	}
 
